@@ -1,0 +1,159 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  
+  /* HEADER */
+  header {
+    background: #1e2a38;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* HERO */
+  .hero {
+    height: 60%;
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  /* ABOUT */
+  .about {
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .about img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  /* PROJECTS */
+  .projects {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: solid #00c6ff 3px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* CONTACT */
+  .contact {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #00c6ff;
+  }
+  
+  /* ✨ ANIMAZIONI SOLO CSS */
+  
+  /* Animazione base */
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Attivazione con scroll (modern browsers) */
+  .fade-in {
+    opacity: 0;
+    animation: fadeSlide 1s ease forwards;
+  
+    /* magia */
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  /* Fallback (se browser non supporta) */
+  @supports not (animation-timeline: view()) {
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  a{
+    text-decoration: none;
+    color:#333;
+  }
+.fade-in:hover{
+  transform: translateY(-10px);
+}
+section a div:hover{
+ color: #00f2fe;
+}
